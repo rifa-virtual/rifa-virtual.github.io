@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Crear Rifa</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎟️</text></svg>">
+</head>
+<body>
+  <main>
+    <h1><i class="fas fa-pen-fancy"></i> Crear Rifa</h1>
+    
+    <form id="form-rifa" role="form" aria-label="Formulario para crear rifa">
+      <div class="form-group">
+        <label for="titulo" id="titulo-label">
+          <i class="fas fa-heading"></i> Nombre de la rifa
+        </label>
+        <input type="text" id="titulo" aria-labelledby="titulo-label" 
+               placeholder="Ej: Gran Rifa de Aniversario" required
+               minlength="5" maxlength="100">
+        <small class="hint">Mínimo 5 caracteres</small>
+      </div>
+      
+      <div class="form-group">
+        <label for="premio" id="premio-label">
+          <i class="fas fa-gift"></i> Premio
+        </label>
+        <input type="text" id="premio" aria-labelledby="premio-label"
+               placeholder="Ej: TV 4K 55 pulgadas" required
+               minlength="5">
+      </div>
+      
+      <div class="form-group">
+        <label for="fecha" id="fecha-label">
+          <i class="fas fa-calendar-alt"></i> Fecha del sorteo
+        </label>
+        <input type="date" id="fecha" aria-labelledby="fecha-label" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="cantidad" id="cantidad-label">
+          <i class="fas fa-hashtag"></i> Cantidad de números (1-100)
+        </label>
+        <input type="number" id="cantidad" aria-labelledby="cantidad-label"
+               placeholder="100" min="1" max="100" required
+               inputmode="numeric">
+      </div>
+      
+      <button type="submit" class="btn">
+        <i class="fas fa-magic"></i> Generar Rifa
+      </button>
+    </form>
+    
+    <div id="preview-container"></div>
+  </main>
+  
+  <script src="https://cdn.jsdelivr.net/npm/html2canvas@1.4.1/dist/html2canvas.min.js"></script>
+  <script src="script_crear.js"></script>
+</body>
+</html>

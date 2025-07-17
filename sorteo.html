@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sortear Número</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link rel="stylesheet" href="style.css">
+  <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 100 100%22><text y=%22.9em%22 font-size=%2290%22>🎟️</text></svg>">
+</head>
+<body>
+  <main>
+    <h1><i class="fas fa-dice"></i> Sorteo de Números</h1>
+    
+    <div class="sorteo-container" role="region" aria-label="Sorteo de números">
+      <div class="form-group">
+        <label for="max-num" id="max-num-label">
+          <i class="fas fa-hashtag"></i> Cantidad máxima de números (1-100)
+        </label>
+        <input type="number" id="max-num" aria-labelledby="max-num-label"
+               placeholder="Ej: 100" min="1" max="100" required
+               inputmode="numeric" pattern="[0-9]*">
+      </div>
+      
+      <button onclick="sortearNumero()" class="btn btn-accent"
+              aria-label="Realizar sorteo">
+        <i class="fas fa-random"></i> Realizar Sorteo
+      </button>
+      
+      <div id="resultado-sorteo"></div>
+    </div>
+  </main>
+  
+  <script src="script_sorteo.js"></script>
+</body>
+</html>
